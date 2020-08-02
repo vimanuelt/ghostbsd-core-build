@@ -12,7 +12,7 @@ These scripts will :
 
 ## Recommend System Requirements for building base packages
 
-* GhostBSD 20.07.14 or newer
+* GhostBSD 20.07.14 or newer 
 * 32GB memory
 * 8 cores
 * 50GB of disk space
@@ -30,6 +30,10 @@ These scripts will :
 * vm-bhyve with one time manual configuration required
 
 Lesser configurations should work but have not been tested.
+
+## Optional 
+The following ISO is suggested for use, but not mandatory.
+ftp://ftp.researchbsd.dev/pub/GhostBSD/development/GhostBSD-minimal-env-for-poudriere-2020-08-02.iso
 
 ## Install C compliler
 ```
