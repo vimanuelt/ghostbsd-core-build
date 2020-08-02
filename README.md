@@ -33,7 +33,9 @@ Lesser configurations should work but have not been tested.
 
 ## Optional 
 The following ISO is suggested for use, but not mandatory.
+```
 ftp://ftp.researchbsd.dev/pub/GhostBSD/development/GhostBSD-minimal-env-for-poudriere-2020-08-02.iso
+```
 
 ## Install C compliler
 ```
