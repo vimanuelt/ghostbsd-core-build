@@ -37,13 +37,10 @@ The following ISO is suggested for use, but not mandatory.
 ftp://ftp.researchbsd.dev/pub/GhostBSD/development/GhostBSD-minimal-env-for-poudriere-2020-08-02.iso
 ```
 
-## Install C compliler
+## Setup build environment 
+Adds necesary build dependencies
 ```
-pkg install os-generic-userland-devtools
-```
-## Install Git
-```
-pkg install git
+sudo ./setup-env.sh
 ```
 ## Install GhostBSD kernel source
 ```
@@ -52,11 +49,6 @@ git clone https://github.com/ghostbsd/ghostbsd.git /usr/src
 ## Install GhostBSD Ports
 ```
 git clone https://github.com/ghostbsd/ghostbsd-ports.git /usr/ports/
-```
-## Install poudriere
-
-```
-pkg install poudriere
 ```
 
 ## Configure poudriere
@@ -90,13 +82,7 @@ Create poudriere ports jail that uses /usr/ports for ports tree:
 poudriere ports -c -p ghostbsd-ports -m null -M /usr/ports/
 ```
 
-## Install nginx to monitor ports build (optional)
-
-Install the nginx package:
-
-```
-pkg install nginx
-```
+## Configure nginx to monitor ports build (optional)
 
 Edit the default configuration:
 
@@ -136,13 +122,6 @@ service nginx start
 
 Now you can access poudriere from http://127.0.0.1 in browser to monitor progress of base packages build.
 
-## Install vm-bhyve
-
-Install package for vm-bhyve
-```
-pkg install vm-bhyve
-```
-
 ## Configure vm-bhyve
 ```
 sysrc vm_enable="YES"
@@ -150,11 +129,6 @@ sysrc vm_dir="zfs:tank/usr/vms"
 zfs set mountpoint=/usr/vms tank/usr/vms
 vm init
 rc-update add vm
-```
-
-Install firmware for UEFI
-```
-pkg install bhyve-firmware
 ```
 
 Create bridge for networking
