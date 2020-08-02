@@ -48,7 +48,7 @@ git clone https://github.com/ghostbsd/ghostbsd.git /usr/src
 ```
 ## Install GhostBSD Ports
 ```
-git clone https://github.com/ghostbsd/ghostbsd-ports.git /usr/ports/
+git clone https://github.com/ghostbsd/ghostbsd-ports.git /usr/ports
 ```
 
 ## Configure poudriere
